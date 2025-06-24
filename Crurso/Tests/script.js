@@ -6,7 +6,7 @@ const tableButtons = document.querySelectorAll('.tableBtn');
 const displayPlayerTurn = document.getElementById('pTurn');
 let p1Turn = true;
 let gameOn = false;
-let board = [];
+let board = ["", "", "", "", "", "", "", "", ""];
 let winner = [
     // Linhas
     [0, 1, 2], // Primeira linha
@@ -55,34 +55,48 @@ function handleBtnClick() {
         this.setAttribute('data-value', 'o');
         p1Turn = true;
         this.setAttribute('disabled', '')
-        checkWinner(this)
+        checkWinner()
     } else {
         displayPlayerTurn.value = player2.value;
         this.innerText = 'X';
         this.setAttribute('data-value', 'X')
         p1Turn = false;
         this.setAttribute('disabled', '')
-        checkWinner(this)
+        checkWinner()
     }
     this.setAttribute('disabled', '');
     this.removeEventListener('click', handleBtnClick);
 }
 
+// let xPos = []
+function checkWinner() {
+    for(let i = 0; i < winner.length; i++){
+        const winningCondition = winner[i];
 
-function checkWinner(lamen) {
-    let index = 0;
-    let player = lamen.dataset.value;
+    }
 
-    tableButtons.forEach( function (button){
-        button.setAttribute('data-index', index++)
-    })
-    let positionData = [];
+
+    //Below works but needs to be finished or better implemented ↓
+
+    // let index = that.dataset.index
+ 
+    // xPos.splice(index, 0, that.dataset.value)
+    // console.log(xPos)
+    // if(xPos[0] == 'X' && xPos[0] == xPos[1] && xPos[1] == xPos[2]){
+    //     tableButtons.forEach(function (elem) {
+    //         elem.setAttribute('disabled', '');
+    //         elem.removeEventListener('click', handleBtnClick);
+    //     })
+    //     return alert('winner!')
+    // }
+
+    // ↑
 }
 
 
 function restartGame() {
     const rBtn = document.getElementById('restart');
-    rBtn.addEventListener('click', function restartHandler () {
+    rBtn.addEventListener('click', function restartHandler() {
         player1.value = '';
         player2.value = '';
         displayPlayerTurn.value = '';

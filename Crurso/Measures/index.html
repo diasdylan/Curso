@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href=" " type="image/x-icon">
+
+  <title>Measure converter</title>
+</head>
+
+<body>
+  <div id="flex-wrapper">
+    <h1> Measure converter</h1>
+    <div id="conversion">
+      <label for='toConvert'>Convert:</label>
+      <input type='number' id='toConvert' onkeypress="return /[0-9]/i.test(event.key)">
+      <select name='measure' id='measure' class="selectors">
+        <option hidden></option>
+        <option value='mm'>Millimeter</option>
+        <option value='cm'>Centimeter</option>
+        <option value='dc'>Decimeter</option>
+        <option value='dam'>Decametre</option>
+        <option value='hm'>hectometre</option>
+        <option value='km'>Kilometer</option>
+      </select>
+
+    </div>
+
+    <div id='convertMeasure'>
+      <label for='convertTo'>To:</label>
+      <select name='convertTo' id='convertTo'>
+        <option hidden></option>
+        <option value='mm'>Millimeter</option>
+        <option value='cm'>Centimeter</option>
+        <option value='dc'>Decimeter</option>
+        <option value='dam'>Decametre</option>
+        <option value='hm'>hectometre</option>
+        <option value='km'>Kilometer</option>
+      </select>
+      <button type='button' id='btnConvert'>Start Conversion!</button>
+    </div>
+
+    <div id='measureConverted'>
+      <label for='measureConvertedSelector'>Unit converted:</label>
+      <input type='number' id='converted' onkeypress="return /[0-9]/i.test(event.key)" readonly>
+      <select name='measureConvertedSelector' id='measureConvertedSelector' class="selectors">
+        <option hidden></option>
+        <option value='mm'>Millimeter</option>
+        <option value='cm'>Centimeter</option>
+        <option value='dc'>Decimeter</option>
+        <option value='dam'>Decametre</option>
+        <option value='hm'>hectometre</option>
+        <option value='km'>Kilometer</option>
+      </select>
+    </div>
+
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>

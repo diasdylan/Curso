@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+  <title>Tic tacs</title>
+</head>
+
+<body>
+  <main id="main">
+    <header>
+      <h1>Tic tac toes:</h1>
+      <button type="button" id="themeSwitch">Switch to Dark/Light mode</button>
+    </header>
+
+
+    <label for="p1" class="playerLabel">Player 1:</label>
+    <input type="text" name="p1" id="p1" required>
+    <label for="p2" class="playerLabel">Player 2:</label>
+    <input type="text" name="p2" id="p2" required>
+    <button type="button" id="start">Start!</button>
+    <button type="button" id="restart">Restart</button>
+    <label for="pTurn">Player Turn:</label>
+    <input type="text" readonly id="pTurn" name="pTurn">
+
+    <section class="tableContainer">
+      <button type="button" class="tableBtn" data-index='1' disabled></button>
+      <button type="button" class="tableBtn" data-index='2' disabled></button>
+      <button type="button" class="tableBtn" data-index='3' disabled></button>
+
+      <button type="button" class="tableBtn" data-index='4' disabled></button>
+      <button type="button" class="tableBtn" data-index='5' disabled></button>
+      <button type="button" class="tableBtn" data-index='6' disabled></button>
+
+      <button type="button" class="tableBtn" data-index='7' disabled></button>
+      <button type="button" class="tableBtn" data-index='8' disabled></button>
+      <button type="button" class="tableBtn" data-index='9' disabled></button>
+    </section>
+  </main>
+</body>
+
+</html>

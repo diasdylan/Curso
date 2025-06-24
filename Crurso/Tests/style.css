@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+:root{
+    --backgroundColor: #ece1a4;
+    --ColorText: black;
+    --Hover: #b4ac80;
+}
+
+.dark-mode{
+    --backgroundColor: #4b4b4b;
+    --ColorText: #c48741;
+    --Hover: #6d6d6d;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    height: 100vh;
+    color: var(--ColorText);
+}
+
+#themeSwitch{
+    margin: 1rem 0;
+}
+
+.playerLabel{
+    margin-top: 1rem;
+}
+
+
+#start{
+    margin: 1rem 0 0;
+}
+
+#restart{
+    margin: 1rem 0;
+}
+
+#pTurn{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.tableContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+}
+
+.tableBtn{
+    padding: 3.125rem;
+    background-color: transparent;
+    border-color: var(--ColorText);
+    outline: none;
+    cursor: pointer;
+    color: var(--ColorText);
+    font-size: 3rem;
+    height: 104px;
+    width: 104px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tableBtn:hover{
+    background-color: var(--Hover);
+}

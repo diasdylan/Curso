@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
+    </style>
+
+    <script src="./script.js" defer></script>
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <header class="header">
+        <h1 id="gameTitle">Tic Tac Toe!</h1>
+      </header>
+
+      <div class="playerNames">
+        <label for="X">X player:</label>
+        <input
+          type="text"
+          placeholder="X player name goes here!"
+          required
+          id="X"
+        />
+        <label for="O" class="circleLabel">Circle Player:</label>
+        <input
+          type="text"
+          placeholder="O Player name goes here!"
+          required
+          name="circle"
+          id="O"
+        />
+      </div>
+
+      <div class="menuButtonsContainer">
+        <button class="menuButtons" id="restartButton">Restart</button>
+        <button class="menuButtons" id="startButton">Start!</button>
+      </div>
+
+      <div class="turno">
+        <h2>Turno:</h2>
+        <p id="currentPlayer"></p>
+      </div>
+
+      <!-- <hr /> -->
+
+      <div class="board">
+        <div class="firstRow">
+          <button class="cell" cellIndex="0" id="c0"></button>
+          <button class="cell" cellIndex="1" id="c1"></button>
+          <button class="cell" cellIndex="2" id="c2"></button>
+        </div>
+
+        <div class="secondRow">
+          <button class="cell" cellIndex="3" id="c3"></button>
+          <button class="cell" cellIndex="4" id="c4"></button>
+          <button class="cell" cellIndex="5" id="c5"></button>
+        </div>
+
+        <div class="thirdRow">
+          <button class="cell" cellIndex="6" id="c6"></button>
+          <button class="cell" cellIndex="7" id="c7"></button>
+          <button class="cell" cellIndex="8" id="c8"></button>
+        </div>
+      </div>
+      <!-- Modal container -->
+      <div id="modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close" id="close">X</span>
+
+          <div class="modal-header" id="modal-header">
+            <h1 id="winMessage">Winner, winner, chicken dinner!</h1>
+          </div>
+
+          <div id="modal-body">
+            <p id="winner-name"></p>
+            <p>Today you won't need to do the dishes!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="drawModal" id="drawModal">
+             <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close" id="drawclose">X</span>
+
+          <div class="modal-header" id="modal-header">
+            <h1 id="drawMessage">IT'S A DRAW!</h1>
+          </div>
+
+          <div id="modal-body">
+            <p>You'll share the dishes today!</p>
+          </div>
+        </div>
+      </div>
+
+      </div>
+
+
+    </div>
+  </body>
+</html>

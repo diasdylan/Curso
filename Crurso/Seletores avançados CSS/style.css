@@ -1,0 +1,26 @@
+ul > li:nth-child(2) {
+  color: pink;
+}
+
+ul > li:nth-child(3n) {
+  color: blue;
+}
+
+ul > li:hover{
+    background-color: grey;
+    width: fit-content;
+}
+
+/* pesue-elementos */
+
+ul > li::before{
+    content: "CSS line 13 added this to the:  ";
+    color: green;
+    font-size: 0.8rem;
+}
+
+ul > li::after{
+    content: " CSS line 17 added this!";
+    color: blueviolet;
+    font-size: 1.2rem;
+}

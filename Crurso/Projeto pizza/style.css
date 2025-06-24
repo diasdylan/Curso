@@ -1,0 +1,245 @@
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 1000 */
+
+.nunito-sans-font {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings: "wdth" 100, "YTLC" 500;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+nav {
+  background-color: rgb(59, 59, 59);
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1.25rem;
+}
+
+.navMenu {
+  margin-top: 1rem;
+  margin-left: 3rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 1.15rem;
+}
+
+.navMenu:hover {
+  color: pink;
+  cursor: pointer;
+}
+
+header {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  /* margin-bottom: 2rem; */
+  overflow: hidden;
+}
+
+#headerBack {
+  z-index: -1;
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+}
+
+#textoInicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 20vh;
+  letter-spacing: 10px;
+}
+
+#inicioSub {
+  font-size: 1rem;
+  letter-spacing: 5px;
+  font-weight: 300;
+}
+
+.naFrente {
+  text-align: center;
+  font-weight: 1000;
+}
+
+#textoInicio>h1,
+h2 {
+  padding-top: 15px;
+  color: whitesmoke;
+}
+
+#divCarda {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#cardapio {
+  border-radius: 10px;
+  border: hidden;
+  color: black;
+  background-color: yellow;
+  font-weight: bolder;
+  padding: 0.8rem;
+}
+
+#cardapio:hover {
+  background-color: black;
+  border-color: darkgoldenrod;
+  border-style: solid;
+  border-width: 3px;
+  color: darkgoldenrod;
+}
+
+#contentFrame>h2 {
+  color: black;
+  text-align: center;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2rem;
+  font-size: 3rem;
+  /* width: 0%; */
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  row-gap: 20px;
+  column-gap: 100px;
+  margin: 0 15% 50px;
+  align-content: space-evenly;
+}
+
+.gridItem {
+  background-color: black;
+  border-radius: 10px;
+  /* height: fit-content; */
+}
+
+/* .imageSection {
+  height: 100%;
+  background-color: pink;
+  width: 100%;
+  border-radius: 10px
+} */
+
+.pizzaItem {
+  border-radius: 10px 10px 0px 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.textSection {
+  background-color: transparent;
+  border-radius: 10px;
+  color: white;
+  text-align: left;
+  padding-left: 1rem;
+}
+
+
+#pageEnd {
+  height: 30vh;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.5));
+}
+
+#imgEnd {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  object-fit: cover;
+  height: 30vh;
+}
+
+#textFim {
+  text-align: center;
+  color: white;
+  padding-top: 75px;
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+#aboutUs {
+  font-size: 3rem;
+  font-weight: bolder;
+  padding: 20px;
+}
+
+.rodape {
+  margin-top: 50px;
+  text-align: center;
+  /* background-color: pink; */
+  height: 100%;
+  margin-bottom: 3rem;
+}
+
+#contato {
+  font-size: 2rem;
+  font-weight: bolder;
+  padding-bottom: 1.2rem;
+}
+
+#contatoDesc {
+  padding-bottom: 1.2rem;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#emial>a:link {
+  color: goldenrod;
+}
+
+#pedir {
+  background-color: goldenrod;
+  border-radius: 7px;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  font-weight: bolder;
+  width: 10%;
+  margin-top: 3rem;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+#pedir:hover {
+  color: white;
+  background-color: black;
+  border: darkgray 1px;
+}
+
+#pedir:active {
+  color: white;
+  background-color: black;
+  border: darkgray 2px;
+  transform: rotate(180deg);
+}
+
+footer {
+  background-color: #232323;
+  color: goldenrod;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-spacing: 0.5rem;
+}

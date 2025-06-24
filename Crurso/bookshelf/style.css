@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.images{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#imgi{
+    height: 55vh;
+    width: 45vw;
+}
+
+#header{
+    width: 100vw;
+    /* background-color: gray; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+#linebreak{
+    width: 100vw;
+    height: 15px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.aboveimage{
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    align-items: center;
+    margin: 10px;
+}
+
+.aboveimage h2{
+    margin: 10px;
+}
+
+
+.aboveimage p{
+    margin: 10px;
+}
+
+.aboveimage #inscrever{
+    margin: 10px;
+}
+
+#inscrever{
+    width: min-content;
+    padding: 15px;
+    border-radius: 100px;
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    border-style: none;
+}
+
+.belowimage{
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    align-items: center;
+    margin: 10px;
+}
+
+.belowimagebuttons{
+    display: flex;
+    /* flex-direction: column; */
+    /* padding-left: 50px; */
+    /* align-items: stretch; */
+    margin: 20px;
+    align-content: space-between;
+    /* width: 100vw; */
+}
+
+#r, #f, #m, #ff, #s, #vermais{
+    margin: 15px;
+    width: 100px;
+    padding: 15px;
+    border-radius: 100px;
+    background-color: #43ABF6;
+    color: white;
+    font-weight: bolder;
+    border-style: none;
+}
+
+.bimb:hover{
+    border-color: #43ABF6;
+    background-color: greenyellow;
+}
+
+#vermais{
+    background-color: black;
+}
+
+
+.rodape{
+    width: 100vw;
+    /* background-color: gray; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.rodape > h2, p, footer{
+    margin: 10px
+}
+
+.rodape > p{
+    margin-bottom: 15px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    text-align: center;
+}
+

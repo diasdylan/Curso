@@ -39,12 +39,11 @@ function gameStart() {
         gameOn = true;
         displayPlayerTurn.value = player1.value;
 
-        tableButtons.forEach((element) => {
+        tableButtons.forEach((element, index) => {
             element.removeAttribute('disabled');
             element.addEventListener('click', handleBtnClick);
-        });
-    }
-    )
+        })
+    })
 }
 
 function handleBtnClick() {
@@ -55,44 +54,50 @@ function handleBtnClick() {
         this.setAttribute('data-value', 'o');
         p1Turn = true;
         this.setAttribute('disabled', '')
-        checkWinner()
+        // checkWinner()
     } else {
         displayPlayerTurn.value = player2.value;
         this.innerText = 'X';
         this.setAttribute('data-value', 'X')
         p1Turn = false;
         this.setAttribute('disabled', '')
-        checkWinner()
+        // checkWinner()
     }
     this.setAttribute('disabled', '');
     this.removeEventListener('click', handleBtnClick);
 }
 
 // let xPos = []
-function checkWinner() {
-    for(let i = 0; i < winner.length; i++){
-        const winningCondition = winner[i];
+// function checkWinner() {
+//     for (let i = 0; i < winner.length; i++) {
+//         const winningCondition = winner[i];
 
-    }
-     
-    //this is a test change
+//         let pos1 = winningCondition[i][0];
+//         let pos2 = winningCondition[i][1];
+//         let pos3 = winningCondition[i][2];
 
-    //Below works but needs to be finished or better implemented ↓
+// if (pos1 && pos1 == pos2 && pos2 == pos3)
 
-    // let index = that.dataset.index
- 
-    // xPos.splice(index, 0, that.dataset.value)
-    // console.log(xPos)
-    // if(xPos[0] == 'X' && xPos[0] == xPos[1] && xPos[1] == xPos[2]){
-    //     tableButtons.forEach(function (elem) {
-    //         elem.setAttribute('disabled', '');
-    //         elem.removeEventListener('click', handleBtnClick);
-    //     })
-    //     return alert('winner!')
-    // }
+// }
 
-    // ↑
-}
+//this is a test change
+
+//Below works but needs to be finished or better implemented ↓
+
+// let index = that.dataset.index
+
+// xPos.splice(index, 0, that.dataset.value)
+// console.log(xPos)
+// if(xPos[0] == 'X' && xPos[0] == xPos[1] && xPos[1] == xPos[2]){
+//     tableButtons.forEach(function (elem) {
+//         elem.setAttribute('disabled', '');
+//         elem.removeEventListener('click', handleBtnClick);
+//     })
+//     return alert('winner!')
+// }
+
+// ↑
+// }
 
 
 function restartGame() {

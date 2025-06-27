@@ -36,6 +36,9 @@ function gameStart() {
         if (gameOn === true) {
             return alert('Please restart the game before starting a new one')
         }
+        if(player1.value === player2.value){
+            return alert('The players can\'t have the same name' )
+        }
         gameOn = true;
         displayPlayerTurn.value = player1.value;
 
@@ -57,7 +60,7 @@ function handleBtnClick() {
         let position = this.dataset.index;
         board[position] = this.dataset.value;
         // console.log(board[position])
-        checkWinner(this)
+        checkWinner()
     } else {
         displayPlayerTurn.value = player2.value;
         this.innerText = 'X';
@@ -67,7 +70,7 @@ function handleBtnClick() {
         let position = this.dataset.index;
         board[position] = this.dataset.value;
         // console.log(board[position])
-        checkWinner(this)
+        checkWinner()
     }
 
     this.setAttribute('disabled', '');
@@ -75,12 +78,35 @@ function handleBtnClick() {
 }
 
 
-function checkWinner(btnClicked) {
-    console.log(board)
+function checkWinner() {
+    // console.table(board)
     for (let i = 0; i < winner.length; i++) {
         const condition = winner[i];
-        let pos1 = 
+        let pos1 = board[condition[0]]
+        let pos2 = board[condition[1]]
+        let pos3 = board[condition[2]]
         console.log(pos1)
+        console.log(pos2)
+        console.log(pos3)
+
+        if (pos1 && pos1 === pos2 && pos2 === pos3) {
+            if (p1Turn === false) {
+                alert(player1.value + ' victory!')
+                gameOn = false;
+                displayPlayerTurn.value = '';
+            }
+            if (p1Turn === true) {
+                alert(player2.value + ' victory!')
+                displayPlayerTurn.value = '';
+                gameOn = false;
+            }
+            tableButtons.forEach(function (elem) {
+                elem.removeAttribute('data-value');
+                elem.setAttribute('disabled', '');
+                elem.removeEventListener('click', handleBtnClick);
+            })
+            return
+        }
     }
 
 }
@@ -93,6 +119,7 @@ function restartGame() {
         displayPlayerTurn.value = '';
         gameOn = false;
         p1Turn = true;
+        board = ['', '', '', '', '', '', '', '', ''];
 
         tableButtons.forEach(function (elem) {
             elem.innerText = '';

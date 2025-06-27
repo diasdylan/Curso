@@ -6,7 +6,7 @@ const tableButtons = document.querySelectorAll('.tableBtn');
 const displayPlayerTurn = document.getElementById('pTurn');
 let p1Turn = true;
 let gameOn = false;
-let board = ["", "", "", "", "", "", "", "", ""];
+let board = ['', '', '', '', '', '', '', '', ''];
 let winner = [
     // Linhas
     [0, 1, 2], // Primeira linha
@@ -39,7 +39,7 @@ function gameStart() {
         gameOn = true;
         displayPlayerTurn.value = player1.value;
 
-        tableButtons.forEach((element, index) => {
+        tableButtons.forEach((element) => {
             element.removeAttribute('disabled');
             element.addEventListener('click', handleBtnClick);
         })
@@ -53,52 +53,37 @@ function handleBtnClick() {
         this.innerText = 'O';
         this.setAttribute('data-value', 'o');
         p1Turn = true;
-        this.setAttribute('disabled', '')
-        // checkWinner()
+        this.setAttribute('disabled', '');
+        let position = this.dataset.index;
+        board[position] = this.dataset.value;
+        // console.log(board[position])
+        checkWinner(this)
     } else {
         displayPlayerTurn.value = player2.value;
         this.innerText = 'X';
-        this.setAttribute('data-value', 'X')
+        this.setAttribute('data-value', 'x')
         p1Turn = false;
         this.setAttribute('disabled', '')
-        // checkWinner()
+        let position = this.dataset.index;
+        board[position] = this.dataset.value;
+        // console.log(board[position])
+        checkWinner(this)
     }
+
     this.setAttribute('disabled', '');
     this.removeEventListener('click', handleBtnClick);
 }
 
-// let xPos = []
-// function checkWinner() {
-//     for (let i = 0; i < winner.length; i++) {
-//         const winningCondition = winner[i];
 
-//         let pos1 = winningCondition[i][0];
-//         let pos2 = winningCondition[i][1];
-//         let pos3 = winningCondition[i][2];
+function checkWinner(btnClicked) {
+    console.log(board)
+    for (let i = 0; i < winner.length; i++) {
+        const condition = winner[i];
+        let pos1 = 
+        console.log(pos1)
+    }
 
-// if (pos1 && pos1 == pos2 && pos2 == pos3)
-
-// }
-
-//this is a test change
-
-//Below works but needs to be finished or better implemented ↓
-
-// let index = that.dataset.index
-
-// xPos.splice(index, 0, that.dataset.value)
-// console.log(xPos)
-// if(xPos[0] == 'X' && xPos[0] == xPos[1] && xPos[1] == xPos[2]){
-//     tableButtons.forEach(function (elem) {
-//         elem.setAttribute('disabled', '');
-//         elem.removeEventListener('click', handleBtnClick);
-//     })
-//     return alert('winner!')
-// }
-
-// ↑
-// }
-
+}
 
 function restartGame() {
     const rBtn = document.getElementById('restart');

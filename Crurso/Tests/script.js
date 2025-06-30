@@ -36,8 +36,8 @@ function gameStart() {
         if (gameOn === true) {
             return alert('Please restart the game before starting a new one')
         }
-        if(player1.value === player2.value){
-            return alert('The players can\'t have the same name' )
+        if (player1.value === player2.value) {
+            return alert('The players can\'t have the same name')
         }
         gameOn = true;
         displayPlayerTurn.value = player1.value;
@@ -50,7 +50,6 @@ function gameStart() {
 }
 
 function handleBtnClick() {
-
     if (p1Turn === false) {
         displayPlayerTurn.value = player1.value;
         this.innerText = 'O';
@@ -59,8 +58,7 @@ function handleBtnClick() {
         this.setAttribute('disabled', '');
         let position = this.dataset.index;
         board[position] = this.dataset.value;
-        // console.log(board[position])
-        checkWinner()
+        checkWinner(this)
     } else {
         displayPlayerTurn.value = player2.value;
         this.innerText = 'X';
@@ -70,24 +68,22 @@ function handleBtnClick() {
         let position = this.dataset.index;
         board[position] = this.dataset.value;
         // console.log(board[position])
-        checkWinner()
+        checkWinner(this)
     }
 
     this.setAttribute('disabled', '');
     this.removeEventListener('click', handleBtnClick);
 }
 
-
-function checkWinner() {
-    // console.table(board)
+function checkWinner(that) {
+    
+    
     for (let i = 0; i < winner.length; i++) {
         const condition = winner[i];
         let pos1 = board[condition[0]]
         let pos2 = board[condition[1]]
         let pos3 = board[condition[2]]
-        console.log(pos1)
-        console.log(pos2)
-        console.log(pos3)
+        
 
         if (pos1 && pos1 === pos2 && pos2 === pos3) {
             if (p1Turn === false) {
@@ -105,10 +101,26 @@ function checkWinner() {
                 elem.setAttribute('disabled', '');
                 elem.removeEventListener('click', handleBtnClick);
             })
-            return
+            return true;
         }
     }
 
+    //Draw
+    if (!board.includes('')) {
+        gameOn = false;
+        displayPlayerTurn.value = '';
+
+
+        tableButtons.forEach(function (elem) {
+            elem.removeAttribute('data-value');
+            elem.setAttribute('disabled', '');
+            elem.removeEventListener('click', handleBtnClick);
+        })
+        tableButtons.forEach((btn) => {
+            btn.setAttribute('data-draw', 'true')
+        })
+        return alert('Draw!')
+    }
 }
 
 function restartGame() {
@@ -126,11 +138,24 @@ function restartGame() {
             elem.removeAttribute('data-value');
             elem.setAttribute('disabled', '');
             elem.removeEventListener('click', handleBtnClick);
+            elem.removeAttribute('data-draw');
         })
     }
     )
 
 }
 
-restartGame()
-gameStart()
+function forceDraw() {
+    for(let i = 0; i < board.length; i++){
+        let counter = 0;
+        board[i] = counter++
+    }
+    tableButtons.forEach((elem) =>{
+        elem.innerText = 'Draw'
+    })
+    checkWinner()
+}
+
+// forceDraw();
+restartGame();
+gameStart();

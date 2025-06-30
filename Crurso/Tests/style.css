@@ -71,3 +71,13 @@
 .tableBtn:hover{
     background-color: var(--Hover);
 }
+
+button[data-draw="true"]{
+    color:  red;
+    cursor: default;
+    font-size: 2rem;
+}
+
+button[data-draw="true"]:hover{
+    background-color: transparent;
+}

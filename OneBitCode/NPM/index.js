@@ -9,6 +9,9 @@ console.log(nombre)
 //To run with nodeJS in the terminal:
 // CRTL+ALT+N 
 
+//Start project / Create packge file: 
+// npm init
+
 // NPM testing and commands: 
 // Npm install --save loadash
 // To install in a dev env to test or use in NON-PROD envs: Npm install --save-dev package_name

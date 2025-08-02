@@ -1,0 +1,15 @@
+{
+  "name": "date-with-dayjs",
+  "version": "1.0.0",
+  "description": "exercise for npm and modules",
+  "main": "mainScript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dylan Dias",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.13",
+    "readline-sync": "^1.4.10"
+  }
+}

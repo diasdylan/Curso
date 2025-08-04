@@ -1,3 +1,3 @@
 # Curso
-Repo for JS studies
-A better dev is on the way
+Repo for My JS studies, mainly comming from the OneBitCode course.
+A better dev on the way!

@@ -1,3 +1,10 @@
+// NPX = Node Package eXecute --according to Brave AI
+// NPX comes with NPM since version 5.2+
+
+// Npm is a tool that use to install packages.
+
+// Npx is a tool that use to execute packages.
+
 Command to start project: 
 
 ## NPM init

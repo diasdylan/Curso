@@ -1,0 +1,24 @@
+Commands that were used:
+
+-D is the same as: --save --dev 
+    Keeps the packages in the dev env only
+
+npm init -y
+npm i -D @babel/core
+npm i -D @babel/cli
+npm i -D @babel/preset-env
+
+//To run the code with babel
+npx babel index.js
+
+// --out-file = Creates a new file with the result instead of parsing the code in the terminal
+npx babel index.js --out-file dist.js
+
+// "--presets=" to use the available presets, separate by comma
+npx babel .\index.js --out-file .\dist.js --presets=@babel/preset-env
+
+// --out-dir = creates a new folder/directory with the resulting file inside
+npx babel .\src\ --out-dir dist --presets=@babel/preset-env
+
+// babel config file:
+babel.config.js

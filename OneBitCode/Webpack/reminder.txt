@@ -41,3 +41,8 @@ npm init -y
 npm i -D webpack
 npm i -D webpack-cli
 npm i dayjs
+
+## If the modules folder is gone/was deleted just reran the install command
+npm i -D @babel/core @babel/cli @babel/preset-env
+
+## The webpack.config.js file has to be in the root folder of the project

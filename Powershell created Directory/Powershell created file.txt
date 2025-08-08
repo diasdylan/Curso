@@ -1,10 +1,13 @@
-Creating an item with powershell: 
+## Creating an item with powershell: 
 
 New-Item -Path . -Name "Powershell created file" -ItemType "file"
 
 Creating a directory with powershell: 
 
 New-Item -Path . -Name "Powershell created directory" -ItemType "directory"
+
+## List files and folders
+ls | select Name, Attributes
 
 ## GIT :
 

@@ -1,13 +1,13 @@
-const path = require('path');
-
 module.exports = {
-    entry: { 
-        main: './src/index.js',
-        side: './src/hellow.js'
-     },
+    entry: {
+        index: './src/index.js'
+    },
     mode: 'development',
-    output: {
-        path: path.resolve(__dirname, 'public/outputDev'),
-        filename: '[name].bundle.min.js'
+    module: {
+        rules: [{
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader']
+        }]
     }
-};
+}
+

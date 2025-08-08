@@ -46,3 +46,7 @@ npm i dayjs
 npm i -D @babel/core @babel/cli @babel/preset-env
 
 ## The webpack.config.js file has to be in the root folder of the project
+
+## Loaders class - OnebitCode 208 JS 4
+
+command ran: npm i --save-dev style-loader css-loader

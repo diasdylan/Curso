@@ -1,0 +1,24 @@
+
+## GIT :
+
+https://stackoverflow.com/questions/7987687/what-is-the-difference-between-git-branch-and-git-checkout-b
+
+## Creates a new branch and changes to it
+git checkout -b 'August'
+
+## Creates a new branch
+git branch 'August'
+
+## Git GUI(Graphical User Interface):
+git gui --feels better
+or
+gitk
+
+## Git Add all TRACKED modified files and directores 
+git add -u
+
+## Undo last commit but leave file staged
+git reset --soft head~1
+
+## Commit with header and description
+git commit -m 'header text' -m 'description text'

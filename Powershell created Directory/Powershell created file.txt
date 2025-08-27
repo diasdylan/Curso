@@ -1,0 +1,20 @@
+## Creating an item with powershell: 
+
+New-Item -Path . -Name "Powershell created file" -ItemType "file"
+
+Creating a directory with powershell: 
+
+New-Item -Path . -Name "Powershell created directory" -ItemType "directory"
+
+## List files and folders
+ls | select Name, Attributes
+
+## GIT :
+
+https://stackoverflow.com/questions/7987687/what-is-the-difference-between-git-branch-and-git-checkout-b
+
+## Creates a new branch and changes to it
+git checkout -b 'August'
+
+## Creates a new branch
+git branch 'August'

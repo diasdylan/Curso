@@ -13,3 +13,12 @@ git branch 'August'
 git gui --feels better
 or
 gitk
+
+## Git Add all TRACKED modified files and directores 
+git add -u
+
+## Undo last commit but leave file staged
+git reset --soft head~1
+
+## Commit with header and description
+git commit -m 'header text' -m 'description text'

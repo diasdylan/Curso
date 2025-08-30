@@ -22,3 +22,9 @@ git reset --soft head~1
 
 ## Commit with header and description
 git commit -m 'header text' -m 'description text'
+
+## Check last commits
+git log
+
+## Check last commit, short format
+git log --oneline

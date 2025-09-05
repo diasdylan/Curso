@@ -1,0 +1,21 @@
+## Create a directory
+mkdir directory_name
+
+## Create a file
+touch file_name.extension
+
+## Overwrite a file - AKA delete everything and insert the new passed text
+echo 'Overwritting your file' > file_name.extension
+
+## Append / Add to the file 
+echo 'Add content to your file' >> file_name.extension
+
+## list files only
+ls -p | grep -v /
+find . -maxdepth 1 -not -type d
+
+## Remove file
+rm file_name
+
+## Remove directory
+rm -r directory_name

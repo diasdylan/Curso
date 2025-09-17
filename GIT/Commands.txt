@@ -3,6 +3,9 @@
 
 https://stackoverflow.com/questions/7987687/what-is-the-difference-between-git-branch-and-git-checkout-b
 
+## List all local branches
+git branch
+
 ## Creates a new branch and changes to it
 git checkout -b 'August'
 

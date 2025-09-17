@@ -25,5 +25,6 @@ function createTeams(){
     return console.log(teams);
 }
 
+console.log('this is but a test for the salame way of life. So don\'t be shy!')
 
 createTeams()

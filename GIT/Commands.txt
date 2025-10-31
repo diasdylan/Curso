@@ -17,6 +17,9 @@ git gui --feels better
 or
 gitk
 
+## GIT add untrack files
+git add -i a * q
+
 ## Git Add all TRACKED modified files and directores 
 git add -u
 

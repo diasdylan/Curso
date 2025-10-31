@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body{
+    background-color: #333333;
+    height: 100%;
+}
+
+h1{
+    margin: 10px;
+    color: white;
+}
+
+#testArea{
+    border: solid pink 3px;
+    height: 50rem;
+}
+
+#elementsArea{
+    border: dotted pink 3px;
+    margin: 10px 20px 0 20px;
+    height: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;   
+}
+

@@ -19,3 +19,9 @@ rm file_name
 
 ## Remove directory
 rm -r directory_name
+
+## Move file
+mv file_name.extension /path/
+
+## Rename file, Directory
+mv oldName newName

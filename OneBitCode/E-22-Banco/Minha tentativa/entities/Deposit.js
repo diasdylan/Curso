@@ -1,15 +1,10 @@
 class Deposit {
-  #value;
-  #date;
-  constructor(value) {
+  #value
+  #created_at
+  constructor(value){
     this.#value = value;
-    this.#date = new Date().toLocaleDateString();
-  }
-  get showDeposit(){
-    console.log(`Deposited value: ${this.#value} 
-Deposit date: ${this.#date}`)
+    this.#created_at = new Date().toLocaleDateString();
   }
 }
-// const salame = new Deposit(200);
-// salame.showDeposit;
+
 module.exports = Deposit;

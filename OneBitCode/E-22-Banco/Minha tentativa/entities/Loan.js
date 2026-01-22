@@ -1,49 +1,35 @@
 const Installment = require("./Installment");
 
 class Loan {
-    static #interestRate = 1.9;
-    #loan;
-    #date;
-    #totalInstallments;
-    #installments = [];
-    constructor(loanValue, totalInstallments){
-        this.#loan = loanValue;
-        this.#date = new Date().toLocaleDateString();
-        this.#totalInstallments = totalInstallments
-        for(let i = 1; i <= totalInstallments; i++){
-            let getValue = this.instValueCalculation;
-            this.#installments.push({Value: getValue, installment: i});
-        }
-
+  static #rate = 1.99;
+  installmentArray = [];
+  constructor(value, installments) {
+    this.loan = value;
+    this.date = new Date().toLocaleDateString();
+    //Calc for installment
+    let installmentValue = Math.fround((value / installments) * Loan.#rate);
+    this.installmentArray.push(`Loan original value: ${value} - Total Installments: ${installments} - Total after interest: ${Math.fround(installmentValue * installments)}`)
+    for (let i = 0; i < installments; i++) {
+      this.installmentArray.push(new Installment(installmentValue, i+1));
     }
-
-    get instValueCalculation(){
-        let installmentValue = Math.round((this.#loan / this.#totalInstallments) * Loan.#interestRate);
-        return installmentValue;
-    }
-
-    static get getRate(){
-        return Loan.#interestRate;
-    }
-    static get checkInterestRate(){
-        console.log(`The current interest rate for a loan is: ${Loan.#interestRate}`)
-    }
-
-    get getLoan(){
-        console.log({
-            'Loan': this.#loan,
-            'Interest Rate:': Loan.#interestRate,
-            'Number of installments:': this.#totalInstallments,
-            'Date': this.#date,
-            'Installements': this.#installments,
-            'Total with interest:': this.#installments[0].Value * this.#totalInstallments
-        })
-    }
-
-    static set changeInterestRate(newValue){
-        Loan.#interestRate = newValue;
-    }
+  }
+  static get checkRate() {
+    return console.log(`This is the current interest rate: ${Loan.#rate}`);
+  }
+  static set newRate(value) {
+    const percentage = value / 100 + 1;
+    Loan.#rate = percentage;
+  }
+  static get checkLoan() {
+    return console.log(this.installmentArray);
+  }
 }
 
-const salame = new Loan(100, 2);
-salame.getLoan;
+module.exports = Loan; 
+
+// it works
+// let salame = new Loan(500, 8);
+// salame.checkLoan;
+// salame.checkRate;
+// salame.newRate = 100
+// salame.checkRate;

@@ -1,11 +1,8 @@
-
 module.exports = class Installment {
-    #loanValue;
-    #installmentValue;
-    #installmentNumber;
-    #paid = false;
-    constructor(loanValue, totalInstallments){
-        this.#loanValue = loanValue;
-        this.#installmentNumber = totalInstallments; 
-    }
+
+  constructor(value, number) {
+    this.value = value;
+    this.number = number;
+    this.situation = 'pending';
+  }
 }

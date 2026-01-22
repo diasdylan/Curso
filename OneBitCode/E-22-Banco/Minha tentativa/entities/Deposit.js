@@ -1,10 +1,11 @@
-class Deposit {
-  #value
-  #created_at
-  constructor(value){
-    this.#value = value;
-    this.#created_at = new Date().toLocaleDateString();
-  }
+module.exports = class Deposit {
+    value
+    date
+    constructor(value){
+        this.value = value;
+        this.date = new Date().toLocaleDateString();
+    }
 }
 
-module.exports = Deposit;
+// let salame = new Deposit(20);
+// console.log(salame)

@@ -12,6 +12,15 @@ git checkout -b 'August'
 ## Creates a new branch
 git branch 'August'
 
+##Changes the branch
+git switch 'branch name'
+
+##Delete branch
+git branch -d 'branch name'
+
+##commit all
+git commit -a
+
 ## Git GUI(Graphical User Interface):
 git gui --feels better
 or

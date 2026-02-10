@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #393E46
+}
+
+#flexContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+h1 {
+    margin: 0.5rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 0 10px #ff4343
+}
+
+input {
+    margin: 0.5rem;
+    border: solid 2px;
+    border-radius: 5px;
+    width: 13rem;
+    text-align: center;
+}
+
+.check {
+    color: #ff4343;
+    width: 13rem;
+}

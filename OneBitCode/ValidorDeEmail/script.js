@@ -60,5 +60,11 @@ function checkEmail() {
 }
 
 function checkPassword(){
+  let upperQuery =  /[A-Z]{1,}/g;
+  let lowerQuery = /[a-z]{1,}/g;
+  let numQuery = /[\d]{1,}/g;
+  let specialQuery = /[^a-zA-Z\d]{1,}/g;
+  let lenghtQuery = /[\S]{8,}/;
 
+  
 }

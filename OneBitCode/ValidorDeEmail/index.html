@@ -12,14 +12,45 @@
 <body>
     <div id="flexContainer">
         <h1>Email validation: </h1>
-        <input type="text" placeholder="Type your email here" id="email" autocomplete="additional-name3"
-            autocorrect="off">
-        <div class="check">
-            <p>Must have a lowercase letter</p>
-            <p>Must have a uppercase letter</p>
-            <p>At least one number</p>
-            <p>At least one special character</p>
-            <p>At least 8 chars long</p>
+        <input type="text" placeholder="Type your email here" id="email" autocomplete="off" autocorrect="off">
+        <button type="button" id="btnCheck" onclick=""> Check </button>
+        <div class="checks">
+            <div class="email">
+                  <h3>Email requirements:</h3>
+                <ul>
+                  
+                    <li>
+                        <p id="at" data-email="at">Must have a @</p>
+                    </li>
+                    <li>
+                        <p id="mc" data-email="mc">Must have 2 characters before and after the @ </p>
+                    </li>
+                    <li>
+                        <p id="num" data-email="num">Must have one number</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="password">
+                <h3>Password requirements:</h3>
+                <ul>
+                    
+                    <li>
+                        <p id="lower" data-password="">Must have a lowercase letter</p>
+                    </li>
+                    <li>
+                        <p id="upper" data-password="">Must have a uppercase letter</p>
+                    </li>
+                    <li>
+                        <p id="num" data-password="">Must have one number</p>
+                    </li>
+                    <li>
+                        <p id="special" data-password="">Must have one special character</p>
+                    </li>
+                    <li>
+                        <p id="long" data-password="">At least 8 chars long</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>

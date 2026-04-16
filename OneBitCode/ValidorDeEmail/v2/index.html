@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validator</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="flexContainer">
+        <form>
+            <label for="email" class="labels">Input your email:</label>
+            <input type="text" name="email" id="email" autocomplete="off" onkeyup="checkEmail()">
+            </dialog>
+            <label for="password" class="labels">Input your password:</label>
+            <input type="text" name="password" id="password" autocomplete="off" onkeyup="checkPassword()">
+            <ul>
+                <span>Requirements:</span>
+                <li class="condition">At least 8 characters long</li>
+                <li class="condition">Upper case</li>
+                <li class="condition">Lower case</li>
+                <li class="condition">Special character</li>
+                <li class="condition">Number</li>
+            </ul>
+            <!-- <button type="submit" id="check">Check</button> -->
+        </form>
+    </div>
+</body>
+
+</html>

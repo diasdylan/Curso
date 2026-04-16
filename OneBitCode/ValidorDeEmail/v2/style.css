@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #666;
+}
+
+#flexContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+ 
+form{
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-weight: 1000;
+    background-color: #999;
+    border: solid 2px black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+label{
+    text-decoration: underline;
+}
+
+#email, #password{
+    margin: 10px;
+    /* border: hidden; */
+    border-radius: 5px;
+}
+
+#email:focus, #password:focus{
+    outline: none;
+}
+
+ul{
+    line-height: 1.5rem;
+}
+
+ul>span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+li{
+    color: rgb(255, 106, 106);
+    text-shadow: 1px 1px 1px black;
+}
+
+.invalidInput{
+    border: 1px solid #fd5353
+}
+
+.validInput{
+    border: 1px solid #24ff11
+}
+
+.validText{
+    color: lightgreen;
+    text-shadow: 1px 1px 1px black;
+}

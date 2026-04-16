@@ -20,7 +20,7 @@ rm file_name
 ## Remove directory
 rm -r directory_name
 
-## Move file
+## Move file or directory
 mv file_name.extension /path/
 
 ## Rename file, Directory
